@@ -1,0 +1,23 @@
+@import './responsive.scss';
+
+.layout {
+    background-color: purple;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    @include desktop() {
+        background-color: yellow;
+    }
+
+    @include tablet() {
+        background-color: green;
+    }
+
+    @include mobile() {
+        background-color: grey;
+    }
+}

@@ -1,0 +1,68 @@
+@import '../../responsive.scss';
+
+.navbar {
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+
+    .leftPart {
+        flex: 3;
+        background: red;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: bold;
+
+            img {
+                width: 28px;
+            }
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+        }
+    }
+
+    .rightPart {
+        flex: 2;
+        background: blue;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: flex-end;
+
+        .menuIcon {
+            display: none;
+            z-index: 999;
+
+            img {
+                width: 36px;
+                cursor: pointer;
+            }
+
+            @include mobile() {
+                display: inline;
+            }
+        }
+    }
+
+    .logo {
+    }
+
+    .links {
+    }
+
+    .menu {
+        height: 100vh;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        right: -50%;
+    }
+}
