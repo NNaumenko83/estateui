@@ -21,11 +21,25 @@
             img {
                 width: 28px;
             }
+
+            .logoText {
+                @include tablet {
+                    display: none;
+                }
+
+                @include mobile {
+                    display: initial;
+                }
+            }
         }
 
         .links {
             display: flex;
             gap: 20px;
+
+            @include tablet {
+                display: none;
+            }
         }
     }
 
@@ -55,14 +69,27 @@
     .logo {
     }
 
-    .links {
-    }
-
     .menu {
         height: 100vh;
         background-color: black;
         position: absolute;
         top: 0;
         right: -50%;
+        transition: all 1s ease-in-out;
+
+        display: flex;
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+
+        &.active {
+            right: 0;
+        }
+
+        a {
+            color: white;
+        }
     }
 }

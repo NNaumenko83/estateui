@@ -15,7 +15,7 @@ const Navbar = () => {
             <div className="leftPart">
                 <a className="logo">
                     <img src="/logo.png" alt="Logo" width={50} />
-                    <span>Mykola</span>
+                    <span className="logoText">Mykola</span>
                 </a>
                 <div className="links">
                     {links.map(link => (
